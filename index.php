@@ -33,10 +33,26 @@
 
     <div id="app">
 
+    <header>
+
+    </header>
+
         <div class="container"></div>
-        <h1>{{title}}</h1>
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col" v-for="song in songinfo">
+                <div class="card text-left">
+                    <img class="card-img-top" :src="song.poster" alt="">
+                    <div class="card body">
+                        <h4 class="card-title">{{song.title}}</h4>
+                        <p class="card-text">{{song.author}}</p>
+                        <p>{{song.year}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /#app -->
+
 
 
 
