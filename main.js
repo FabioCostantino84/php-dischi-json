@@ -1,29 +1,28 @@
 const { createApp } = Vue
 createApp({
-    data() {
-        return {
-
-            /* collego i due server */
-            //base_url: 'http://127.0.0.1:5173/server.php',
-            base_url: 'server.php',
-            songinfo: []
-
-        }
-    },
-
-    methods: {
-        fetchData(url) {
-            axios
-                .get(url)
-            then(response => {
-
-            })
-        }
-
-    },
-    mounted() {
-
-        this.fetchData(this.base_url);
-
+  data() {
+    return {
+      base_url: 'server.php',
+      error: null,
+      songinfo: []
     }
+  },
+  methods:{
+    fetchData(url){
+      axios
+      .get(url)
+      .then(response => {
+        console.log(response);
+        this.songinfo = response.data
+      })
+      .catch(err => {
+        console.error(err.message);
+        this.error = err.message
+      })
+    }
+  },
+  mounted(){
+    this.fetchData(this.base_url);
+  }
+
 }).mount('#app')
