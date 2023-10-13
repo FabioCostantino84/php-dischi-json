@@ -3,8 +3,8 @@
 }
 
 :root {
-    --bg-header: #06131f;
-    --bg-body: #1d2d3c;
-    --bg-card: #112030;
-    --bg-logo: #18d860;
+    --bg-darker: #06131f;
+    --bg-dark: #1d2d3c;
+    --bg-primary: #112030;
+    --bg-accent: #18d860;
 }
