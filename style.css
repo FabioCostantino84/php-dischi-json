@@ -1,0 +1,10 @@
+#app{
+    background-color: lightslategray;
+}
+
+:root {
+    --bg-header: #06131f;
+    --bg-body: #1d2d3c;
+    --bg-card: #112030;
+    --bg-logo: #18d860;
+}
